@@ -1,0 +1,123 @@
+<div class="main_page-hero-image1">
+  <div>
+    <h1> <strong> Discover your future neighbourhood ! </strong> </h1>
+  </div>
+</div>
+
+
+<br><br><br>
+
+<!-- new design  -->
+<div class="container mapContainer">
+  <div class="row">
+    <!-- 1.column (wide)-->
+    <div class="col-xs-12 col-sm-8" style="padding: 0;">
+      <!-- The map with the result; passing markers and radius via "data-" -->
+      <div id="map" data-marker="<%= @markers.to_json %>" data-radius="<%= @search.radius.to_i %>">
+      </div>
+    </div>
+
+    <!-- 2.column (narrow) -->
+    <div class="col-xs-12 col-sm-4">
+      <!-- 2.column (narrow) / 1.row -->
+      <div class="row">
+        <div class="col-xs-12 nopadding">
+          <div class="sidebarContent1">
+            <h5><strong><%= @reviews_in_radius.size %></strong></h5>
+            <h6><strong>REVIEWS</strong></h6>
+            <div class="add-review">
+              <%= link_to "Add review!", new_search_review_path(:search_id => @search.id), :class => "btn btn-block btn-default btn-xs", :style => "color:#fc6a6a;" %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2.column (narrow) / 2.row -->
+      <div class="row">
+        <div class="col-xs-12 nopadding">
+
+          <div class="row">
+            <div class="col-xs-7" style="padding-right: 0;">
+              <div class="sidebarContent2">
+                <strong>Address</strong>
+                <%= form_tag(controller: "searches", action: "create", method: "post") do %>
+                <%= text_field_tag :search, @search.address, :class => 'formTagInputAddress' %>
+              </div>
+
+            </div>
+            <div class="col-xs-5" style="padding-left: 0;">
+              <div class="sidebarContent2">
+                <strong>Radius (m)</strong>
+                <%= number_field_tag(:radius, @search.radius, min: 100, max: 2500, step: 100, :class => 'formTagInputRadius' ) %>
+              </div>
+
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="sidebarContent3">
+                <%= submit_tag("Search again", :class=>"btn btn-block btn-default btn-xs", :style=>"color:#7B7B7B;")  %>
+                <% end %>
+                <%= link_to "Save this search", new_user_session_path, :class => "btn btn-block btn-default btn-xs", :style=>"color:#7B7B7B;" %>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>
+
+
+<!-- show the list of reviews in radius -->
+<ul>
+  <% @reviews_in_radius.each do |r| %>
+
+  <!-- MODAL FOR EACH REVIEW: each review has its unique id (e.g. id="reviewModal-12" %>-->
+  <div class="modal fade" id="reviewModal-<%= r.id %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+          <h4 class="modal-title" id="myModalLabel"> <%= r.street_review_title %> </h4>
+          <!-- avatar image -->
+          <%= cl_image_tag r.user.photo, width: 150, height: 150, crop: :thumb, gravity: :face, class: "card-user-in-modal" %>
+        </div>
+
+        <div class="modal-body">
+          <p>
+            <strong>Address:</strong>
+            <%= r.address %> (<%= '%.02f' % r.distance_from(@search.address) %> km away)
+          </p>
+          <p><strong>Rating:</strong> <%= r.street_review_average_rating %>/5</p>
+          <p>
+            <strong>Review Street:</strong>
+            <%= r.street_review_content %>
+          </p>
+          <p>
+            <strong>From user:</strong>
+            <%= r.user.email %>
+          </p>
+          <p>
+            <%= cl_image_tag r.photo, :width=>'100%', :alt=>"street photo" %>
+          </p>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <% end %>
+</ul>
+
+
+<!-- unnecessary divs??? : -->

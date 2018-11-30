@@ -1,0 +1,96 @@
+
+.review-hero-image {
+   /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url("reviewPic4.jpeg");
+
+    /* Set a specific height */
+    height: 50vh;
+
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  }
+  .container {
+    margin-top: 30px;
+    margin-bottom: 130px;
+    position: relative;
+  }
+  .MapSearchReview {
+    text-align: center;
+    padding: 30px;
+    margin: 40px;
+    margin-left: 180px;
+    width: 1000px;
+    height: 600px;
+    border: none;
+    box-shadow: 0 0px 0px rgba(0,0,0,0.6);
+    background-size: cover !important;
+    background-color: #FFF;
+    &:hover {
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+  }
+  .review-title {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
+
+  .confirm {
+    position: absolute;
+    margin: 30px;
+    margin-top: 580px;
+    margin-left: 1200px;
+  }
+  .color-street {
+    color: #FA5659;
+    margin-bottom: 40px;
+  }
+  .color-commune {
+    color: #32B796;
+    margin-bottom: 40px;
+  }
+  .cards{
+    display: flex;
+    justify-content: space-between;
+  }
+  .card-Review-Street {
+    width: 50%;
+    padding: 20px;
+    margin: 20px;
+    margin-left: 180px;
+    height: 600px;
+    box-shadow: 0 0px 0px rgba(0,0,0,0.6);
+    background-size: cover !important;
+    background-color: #FFF;
+    border: none;
+    &:hover {
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+  }
+
+  .card-Review-Commune {
+    width: 50%;
+    padding: 20px;
+    margin: 20px;
+    height: 600px;
+    border: none;
+    box-shadow: 0 0px 0px rgba(0,0,0,0.6);
+    background-size: cover !important;
+    background-color: #FFF;
+    &:hover {
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+  }
+  .staticmap img {
+    margin-left: 40px;
+    margin: 10px;
+    box-shadow: 0 0px 0px rgba(0,0,0,0.6);
+    text-align: center;
+  }

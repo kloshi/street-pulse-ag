@@ -1,0 +1,25 @@
+a.buttonNoFillGreen {
+  color: white;
+  background-color: #32B796;
+  width: 150px;
+  font-size: 15px;
+  padding: 15px;
+  border-radius: 3px;
+  text-align: center;
+  border: 1px solid #32B796;
+  margin-top: 30px;
+  box-sizing: border-box;
+}
+
+a.buttonNoFillGreen:visited {
+  color: white;
+}
+
+a.buttonNoFillGreen:hover {
+  background-color: white !important;
+  color: #32B796 !important;
+  border: 1px solid #32B796;
+  text-decoration: none !important;
+  cursor: pointer;
+  transition: ease 0.3s;
+}

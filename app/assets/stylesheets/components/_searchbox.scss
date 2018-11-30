@@ -1,0 +1,43 @@
+#searchdestination {
+  display: flex;
+  position: relative;
+  .submit-search {
+    position: absolute;
+    top: 530px;
+    left: 740px;
+    box-shadow: 1px 1px 3px 3px rgba(0,0,0,0.1);
+    &:hover {
+      outline: none;
+      box-shadow: 1px 1px 6px 6px rgba(0,0,0,0.1);
+    }
+  }
+  .searchBar {
+    position: absolute;
+    top: 428px;
+    left: 300px;
+    width: 700px;
+  }
+  #search {
+    position: absolute;
+    top: 100px;
+    width: 60%;
+    font-size: 1em;
+    text-align: center;
+    border: none;
+    border-radius: 3px;
+    padding: 10px;
+    box-shadow: 1px 1px 3px 3px rgba(0,0,0,0.1);
+    transition: all 0.3s;
+    &:hover {
+      outline: none;
+      box-shadow: 1px 1px 6px 6px rgba(0,0,0,0.1);
+    }
+  }
+
+}
+
+
+.searchBarAddress form #search {
+  width: 350px;
+  height: 40px;
+}
