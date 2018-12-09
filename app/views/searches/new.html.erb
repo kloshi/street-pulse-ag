@@ -1,27 +1,50 @@
 <% content_for(:navbar_class,"navbar-home") %>
 
 <div class="hero-image">
-  <div class="hero-text">
-    <h1> Street Pulse </h1>
-  </div>
 
-  <!-- the search -->
-  <div id="searchdestination">
+  <div class="container">
 
-    <div class="col-10 col-lg-8">
-      <div class="searchBar">
-        <%= form_tag(controller: "searches", action: "create", method: "post") do %>
-        <%= text_field_tag(:search) %>
+    <div class="row">
+      <div class="col-xs-12"">
+        <!-- logo (text) -->
+        <div class="hero-text">
+          <h1> Street Pulse </h1>
+        </div>
       </div>
-      <div class="submit-search">
-        <%= submit_tag "Discover", class: "btn btn-primary" %>
+    </div>
+
+
+    <!-- <div class="searchdestination"> -->
+    <div class="row">
+      <div class="col-xs-12 col-sm-7">
+        <!-- the search -->
+        <div class="searchBar">
+          <%= form_tag(controller: "searches", action: "create", method: "post") do %>
+          <%= text_field_tag(:search, nil) %>
+        </div>
       </div>
+      <div class="col-xs-12 col-sm-5">
+        <div class="searchSubmit">
+          <%= submit_tag "Discover", class: "btn btn-primary" %>
+        </div>
+      </div>
+    </div>
+
 
       <% end %>
-    </div>
+
+    <!-- </div> -->
+
   </div>
 
 </div>
+
+<!-- alternative approach: -->
+<!-- 1/div with background image (hero-image) -->
+<!-- 2/div banner with a hero-text (hero-image) align-left with some padding-left  -->
+<!-- 3/div banner for search field and button (hero-image) display:flex; align-items:center-->
+
+
 
 <br><br><br><br><br>
 

@@ -1,31 +1,67 @@
-  // Specific CSS for your home-page
+// Specific CSS for your home-page
 /* The hero image */
+* {
+  box-sizing:border-box;
+}
+
 .hero-image {
     /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+    display: flex;
     background-image: linear-gradient(rgba(0, 0, 0, 0.4),
       rgba(0, 0, 0, 0.4)), url("main_photo.jpg");
     /* Set a specific height */
+    width: 100%;
     height: 80vh;
     /* Position and center the image to scale nicely on all screens */
-    background-position: center;
+    background-size: cover !important;
+    align-items: center;
     background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
+    background-position: center;
   }
 
 /* Place text in the middle of the image */
 .hero-text {
-  text-align: left;
-  position: absolute;
   color: white;
-  opacity: 0,8;
-  top: 400px;
-  left: 70px;
+  opacity: 0.9;
 }
 .hero-text h1 {
+  font-family: "Playfair Display", serif;
+  font-weight: 900;
+  font-style: italic;
   color: white;
-  font-weight: italic;
-  font-size: 70px;
+  font-size: 10vw;
+}
+
+.searchBar {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  float: right;
+  border: none;
+  border-radius: 3px;
+  margin-right: -10px;
+}
+.searchBar input[type=text] {
+  width: 150%;
+  border: 1px solid #ccc;
+  padding-left: 10px;
+  height: 40px;
+  resize: vertical;
+  border-radius: 3px;
+  float: right;
+}
+
+.searchSubmit {
+  float: left;
+}
+
+@media screen and (max-width: 768px) {
+  .searchBar, .searchBar input[type=text] {
+    width: 100%;
+    float: left;
+    justify-content: flex-start;
+    margin-bottom: 2px;
+  }
 }
 
 .color-title {
@@ -39,17 +75,6 @@
   height: 80vh;
 }
 
-.btn-primary{
-  margin-top: -2px;
-  height: 45px;
-
-}
-
-.btn-primary a {
-  color: white;
-  text-decoration: none;
-}
-
 .banner {
   height: 100vh;
 }
@@ -60,7 +85,6 @@
   margin-bottom: 30px;
   margin-left: 70px;
   margin-right: 70px;
-
 }
 .home-section-valueprop1{
  padding: 10px;
