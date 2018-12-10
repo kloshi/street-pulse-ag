@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: space-between;
   height: 80px;
-  padding: 0px 50px;
+  padding: 0px 25px;
   color: #31333B;
   box-shadow: 1px 1px 2px rgba(0,0,0,0.1);
 }
@@ -13,7 +13,8 @@
   align-items: center;
 }
 .footer-copyright {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  text-align: center;
 }
 .footer-links a {
   color: #31333B;
@@ -28,6 +29,6 @@
 .footer .fa-github, .fa-instagram, .fa-facebook, .fa-twitter, .fa-linkedin {
   color: #FA5659;
 }
-.body {
-  min-height: calc(100vh - 140px)
-}
+// .body {
+//   min-height: calc(100vh - 140px)
+// }

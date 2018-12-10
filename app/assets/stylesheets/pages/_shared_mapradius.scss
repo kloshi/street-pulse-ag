@@ -15,42 +15,7 @@
    text-align: center;
    padding: 100px;
  }
- .MapInfos {
-  // width: 50%;
-  // margin: 40px;
-  // margin-left: 100px;
-  // position: relative;
-}
 
-.searchBarAddress {
-  // position: absolute;
-  // top: 135px;
-}
-
-.searchRadiusTitle {
-  // position: absolute;
-  // top: 140px;
-}
-
-.searchBarRadius {
-  // position: absolute;
-  // top: 165px;
-}
-
-.buttonsMapInfos {
-  // position: relative;
-  // width: 300px;
-}
-
-.SaveButton {
-  // position: absolute;
-  // bottom: -80px;
-}
-.AddButton {
-  // position: absolute;
-  // bottom: -80px;
-  // left: 150px;
-}
 .btn-success a {
   color: white
 }
@@ -154,15 +119,21 @@
 .formTagInputAddress {
   position: relative;
   bottom: -2px;
+  padding: 2px 6px;
   width: 100%;
   float: left;
+  border: 1px solid #a6a9b5;
+  border-radius: 2px;
 }
 
 .formTagInputRadius {
   position: relative;
   bottom: -2px;
+  padding: 2px 6px;
   width: 100%;
   float: left;
+  border: 1px solid #a6a9b5;
+  border-radius: 2px;
 }
 
 
