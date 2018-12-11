@@ -7,7 +7,7 @@
 </div>
 
 <!-- New cards for stats -->
-<div class="container">
+<div class="container" style="margin-bottom: 30px;">
   <div class="row">
     <div class="col-xs-12 col-sm-6 col-md-3">
       <!-- first card -->
@@ -147,12 +147,8 @@
 </div>
 <!-- ================== -->
 
-<div class="container">
-  <div class="row">
-    <div class="col-xs-4 col-xs-offset-4">
-      <%= link_to "Add your own Review!", new_search_review_path(:search_id => @search.id), class:"buttonNoFillGreen" %>
-    </div>
-  </div>
+<div class="banner100" style="height: 100px;">
+  <%= link_to "Add your own Review!", new_search_review_path(:search_id => @search.id), class:"buttonNoFillGreen", style:"font-size: 2.5rem; width: 300px;margin:auto;" %>
 </div>
 
 <br><br>

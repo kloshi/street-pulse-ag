@@ -1,14 +1,10 @@
 <!-- SECTION 4: Review of the locals -->
-<div class="reviewTitle">
-  <h3> <strong> What Locals say: </strong> </h3>
+<div class="banner100">
+  <h1>What locals say about this area:</h1>
 </div>
-<div>
-  <%= link_to "Add Review", new_search_review_path(:search_id => @search.id), class:"buttonNoFillGreen", style:"margin-left:1210px" %>
-</div>
-<br>
 
 <!-- Cards with user reviews -->
-<div class="container">
+<div class="container" style="margin-bottom: 30px;">
   <div class="row">
     <div class="col-xs-12">
       <div class="card-blocks">
@@ -38,3 +34,8 @@
     </div>
   </div>
 </div>
+
+<div class="banner100" style="height: 100px;">
+  <%= link_to "Add your own Review!", new_search_review_path(:search_id => @search.id), class:"buttonNoFillGreen", style:"font-size: 2.5rem; width: 300px;margin:auto;" %>
+</div>
+<br><br><br>
