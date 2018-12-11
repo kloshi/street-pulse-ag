@@ -1,6 +1,6 @@
 // section Statistics
 
- .cardStat {
+.cardStat {
   margin-left: 190px;
   padding: 20px;
   margin: 20px;
@@ -71,4 +71,90 @@
 
 .row.row-margin {
   // margin-right: 15px;
+}
+
+
+// CARDS WITH STATS:
+.card-stats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  height: 400px;
+  // width: 25%;
+  max-width: 300px;
+  margin: 50px 20px;
+  background-color: #FFF;
+  -webkit-box-shadow: 2px 1px 5px 0px rgba(100, 100, 100, 0.75);
+  -moz-box-shadow: 2px 1px 5px 0px rgba(100, 100, 100, 0.75);
+  box-shadow: 2px 1px 5px 0px rgba(100, 100, 100, 0.75);
+}
+
+.card-img-top {
+  float: left;
+  display: flex;
+  position: relative;
+  height: 120px;
+  width: 100%;
+  margin-bottom: 10px;
+  align-items: center;
+  justify-content: center;
+  -webkit-box-shadow: 0px 1px 2px 0px rgba(100, 100, 100, 0.75);
+  -moz-box-shadow: 0px 1px 2px 0px rgba(100, 100, 100, 0.75);
+  box-shadow: 0px 1px 2px 0px rgba(100, 100, 100, 0.75);
+  overflow: hidden;
+  h1 {
+    color: white;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 900;
+    text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+  }
+  h1 span {
+    background: rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+}
+
+img.top {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: auto;
+  width: 100%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.stat-bar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  position: relative;
+  height: 60px;
+  width: 90%;
+  background-color: #a6d86b;
+  border-radius: 2px;
+  color: white;
+  overflow: hidden;
+  h1 {
+    position: absolute;
+    margin: auto;
+    left: 63px;
+    width: 47%;
+    color: white;
+    text-align: left;
+    font-size: 1.6rem;
+    font-weight: 900;
+    text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+  }
+  img {
+    position: absolute;
+    left: 10px;
+  }
 }
