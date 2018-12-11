@@ -1,22 +1,5 @@
-
 // section Statistics
-.main_page-hero-image2 {
-  /* Use “linear-gradient” to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("main_page_run.jpeg");
 
-   /* Set a specific height */
-   height: 50vh;
-
-   /* Position and center the image to scale nicely on all screens */
-   background-position: center;
-   background-repeat: no-repeat;
-   background-size: cover;
-   position: relative;
-   box-shadow: 0 1px 3px rgba(0,0,0,0.6);
-   color: white;
-   text-align: center;
-   padding: 100px;
- }
  .cardStat {
   margin-left: 190px;
   padding: 20px;

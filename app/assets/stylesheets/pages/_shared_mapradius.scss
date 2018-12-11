@@ -1,29 +1,67 @@
 // section MapRadius
-.main_page-hero-image1 {
-  /* Use “linear-gradient” to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("main_page_map.jpeg");
-  box-shadow: 0 1px 3px rgba(0,0,0,0.6);
-  color: white;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
+// .main_page-hero-image1 {
+//   /* Use “linear-gradient” to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+//   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("main_page_map.jpeg");
+//   box-shadow: 0 1px 3px rgba(0,0,0,0.6);
+//   color: white;
+//   background-size: cover;
+//   background-repeat: no-repeat;
+//   background-position: 50% 50%;
+//   display: flex;
+//   text-align: center;
+//   height: 50vh;
+//   align-items: center;
+//   justify-content: center;
+//   margin: 0 auto;
+//   position: relative;
+//   box-sizing: border-box;
+//   h1 {
+//     font-size: 50px;
+//     font-weight: 600;
+//     text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+//   }
+// }
+
+.banner201 {
   display: flex;
+  color: white;
   text-align: center;
-  height: 50vh;
+  height: 255px;
   align-items: center;
   justify-content: center;
   margin: 0 auto;
   position: relative;
   box-sizing: border-box;
-
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
   h1 {
     font-size: 50px;
     font-weight: 600;
     text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
   }
 }
+.img201-1 {
+  background-image: url("main_page_map.jpeg");
+}
+.img201-2 {
+  background-image: url("main_page_run.jpeg");
+}
+.img201-3 {
+  background-image: url("main_page_lifestyle.jpeg");
+}
 
- .btn-success a {
+
+@media screen and (max-width: 767px) {
+  .banner201 h1 {
+    font-size: 9vw;
+  }
+}
+
+
+// =============
+
+.btn-success a {
   color: white
 }
 
