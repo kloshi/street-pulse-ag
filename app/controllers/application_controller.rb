@@ -10,8 +10,6 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:account_update, keys: [:username, :email, :f_name, :l_name, :photo])
   end
 
-
-
   def street_average
     counter = @reviews_in_radius.size
     total = 0.0
@@ -76,10 +74,10 @@ class ApplicationController < ActionController::Base
 
   def income
     incomes = ["Super High Income","High Income", "Average Income", "Low Income"]
-    s=0
-    h=0
-    a=0
-    l=0
+    s = 0
+    h = 0
+    a = 0
+    l = 0
 
     @answers_within_radius.each { |income|
       case :q6
@@ -111,9 +109,10 @@ class ApplicationController < ActionController::Base
         counter += 1
       end
     }
+    # raise
     if counter > 0
-      result = ((total/counter)*20).round
-      return "#{result} %"
+      result = ((total/counter)).round(1)
+      return "#{result}"
     else
       return "N/A"
     end
@@ -136,5 +135,4 @@ class ApplicationController < ActionController::Base
     end
     return zip_code
   end
-
 end

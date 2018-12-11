@@ -2,87 +2,162 @@
   <h1>Get insights about the neighbourhood <br>from locals!</h1>
 </div>
 
-<!-- New cards for stats -->
-
-<!-- first card -->
-<div class="card-stats">
-  <div class="card-img-top">
-    <h1><span>Community</span></h1>
-    <%= image_tag("img-community.jpeg", class: "top") %>
-  </div>
-
-  <div class="stat-bar">
-    <%= image_tag("main_page_hands.png") %>
-    <h1>Friendly neighbours</h1>
-  </div>
-
-  <div class="stat-bar">
-    <%= image_tag("main_page_event.png") %>
-    <h1>Activity and events organised</h1>
-  </div>
-
-  <div class="stat-bar">
-    <%= image_tag("main_page_5years.png") %>
-    <h1>I plan to live here >5 years</h1>
-  </div>
-
+<div class="banner100">
+  <h1>Check what locals think about this area:</h1>
 </div>
 
-<!-- second card -->
+<!-- New cards for stats -->
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <!-- first card -->
+      <div class="card-stats">
+        <div class="card-img-top">
+          <h1><span>Community</span></h1>
+          <%= image_tag("img-community.jpeg", class: "top") %>
+        </div>
 
+        <div class="stat-bar">
+          <%= image_tag("main_page_hands.png", width: '50') %>
+          <h1>Friendly neighbours</h1>
+          <h6> <span><%= @stats[:friendliness] %></span> </h6>
 
+        </div>
+
+        <div class="stat-bar">
+          <%= image_tag("main_page_event.png", width: '50') %>
+          <h1>Activity and events organised</h1>
+          <h6> <span><%= @stats[:events] %></span> </h6>
+        </div>
+
+        <div class="stat-bar">
+          <%= image_tag("main_page_5years.png", width: '50') %>
+          <h1>I plan to live here >5 years</h1>
+          <h6> <span><%= @stats[:stay] %></span> </h6>
+        </div>
+      </div>
+    </div>
+
+    <!-- second card -->
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <div class="card-stats">
+        <div class="card-img-top">
+          <h1><span>Environment</span></h1>
+          <%= image_tag("img-environment.jpg", class: "top") %>
+        </div>
+
+        <div class="stat-bar">
+          <%= image_tag("main_page_quiet.png", width: '50') %>
+          <h1>Quiet place</h1>
+          <h6> <span><%= @stats[:quiet] %></span> </h6>
+
+        </div>
+
+        <div class="stat-bar">
+          <%= image_tag("question_environment.png", width: '50') %>
+          <h1>Green place</h1>
+          <h6> <span><%= @stats[:green] %></span> </h6>
+        </div>
+
+        <div class="stat-bar">
+          <%= image_tag("main_page_clean.png", width: '50') %>
+          <h1>Clean place</h1>
+          <h6> <span><%= @stats[:clean] %></span> </h6>
+        </div>
+      </div>
+    </div>
+
+    <!-- third card -->
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <div class="card-stats">
+        <div class="card-img-top">
+          <h1><span>Facilities</span></h1>
+          <%= image_tag("img-parking.png", class: "top") %>
+        </div>
+
+        <div class="stat-bar">
+          <%= image_tag("main_page_car.png", width: '50') %>
+          <h1>Easy to park</h1>
+          <h6> <span><%= @stats[:parking] %></span> </h6>
+
+        </div>
+
+        <div class="stat-bar">
+          <%= image_tag("main_page_parking.png", width: '50') %>
+          <h1>Parking for cars</h1>
+          <h6> <span><%= @stats[:cars] %></span> </h6>
+        </div>
+
+        <div class="stat-bar">
+          <%= image_tag("main_page_bike.png", width: '50') %>
+          <h1>Parking for bikes</h1>
+          <h6> <span><%= @stats[:bikes] %></span> </h6>
+        </div>
+
+        <div class="stat-bar">
+          <%= image_tag("main_page_tram.png", width: '50') %>
+          <h1>Public transport</h1>
+          <h6> <span><%= @stats[:transportation] %></span> </h6>
+        </div>
+
+        <div class="stat-bar">
+          <%= image_tag("main_page_bikepath.png", width: '50') %>
+          <h1>Bike lanes</h1>
+          <h6> <span><%= @stats[:bike_lanes] %></span> </h6>
+        </div>
+      </div>
+    </div>
+
+    <!-- fourth card -->
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <div class="card-stats">
+        <div class="card-img-top">
+          <h1><span>Comfort</span></h1>
+          <%= image_tag("img-clean-city.jpg", class: "top") %>
+        </div>
+
+        <div class="stat-bar">
+          <%= image_tag("main_page_street.png", width: '50') %>
+          <h1>Pavements well maintained</h1>
+          <h6> <span><%= @stats[:pavement] %></span> </h6>
+
+        </div>
+
+        <div class="stat-bar">
+          <%= image_tag("main_page_light.png", width: '50') %>
+          <h1>Street well illuminated</h1>
+          <h6> <span><%= @stats[:lightened] %></span> </h6>
+        </div>
+
+        <div class="stat-bar">
+          <%= image_tag("main_page_playground.png", width: '50') %>
+          <h1>Nice playground</h1>
+          <h6> <span><%= @stats[:playgrounds] %></span> </h6>
+        </div>
+
+        <div class="stat-bar">
+          <%= image_tag("main_page_dog.png", width: '50') %>
+          <h1>Dog friendly</h1>
+          <h6> <span><%= @stats[:dog_friendly] %></span> </h6>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
 <!-- ================== -->
-
 
 <div class="container">
   <div class="row">
-    <div class="col-xs-12">
-      <div class="StatTitle">
-        <h3> <strong> What Locals think about: </strong> </h3>
-        <%= link_to "Add Review", new_search_review_path(:search_id => @search.id), class:"buttonNoFillGreen" , style:"margin-left:90%" %>
-      </div>
-      <!-- button Addreview -->
-
-      <div class="cardStat", style="display: flex">
-        <div class="community">
-          <h3><%= Answer::QUESTIONS[:q7][:category] %></h3>
-          <br>
-          <p> <%= image_tag "main_page_hands.png" %> <strong> <%= @stats[:friendliness] %> </strong> "Friendly neighbours"</p>
-          <p> <%= image_tag "main_page_event.png" %> <strong> <%= @stats[:events] %> </strong> "Activity and events organised" </p>
-          <p> <%= image_tag "main_page_5years.png" %> <strong> <%= @stats[:stay] %> </strong> "Plan to stay >5 years" </p>
-        </div>
-        <div class="environment">
-         <h3> <%= Answer::QUESTIONS[:q10][:category] %></h3>
-         <br>
-         <p> <%= image_tag "main_page_quiet.png" %> <strong> <%= @stats[:quiet] %> </strong> "Quiet place" </p>
-         <p> <%= image_tag "question_environment.png" %> <strong> <%= @stats[:green] %> </strong> "Green place" </p>
-         <p> <%= image_tag "main_page_clean.png" %> <strong> <%= @stats[:clean] %> </strong> "Clean place" </p>
-       </div>
-       <div class="facilities">
-         <h3> <%= Answer::QUESTIONS[:q13][:category] %></h3>
-         <br>
-         <p> <%= image_tag "main_page_car.png" %> <strong> <%= @stats[:parking] %> </strong> "Easy to park" </p>
-         <p> <%= image_tag "main_page_parking.png" %> <strong> <%= @stats[:cars] %> </strong> "Parking for cars" </p>
-         <p> <%= image_tag "main_page_bike.png" %> <strong> <%= @stats[:bikes] %> </strong> "Parking for bikes" </p>
-         <p> <%= image_tag "main_page_tram.png" %> <strong> <%= @stats[:transportation] %> </strong> "Public transport" </p>
-         <p> <%= image_tag "main_page_bikepath.png" %> <strong> <%= @stats[:bike_lanes] %> </strong> "Bike lanes" </p>
-       </div>
-       <div class="comfort">
-         <h3> <%= Answer::QUESTIONS[:q21][:category] %></h3>
-         <br>
-         <p> <%= image_tag "main_page_street.png" %> <strong> <%= @stats[:pavement] %></strong> "Pavement well maintained" </p>
-         <p> <%= image_tag "main_page_light.png" %> <strong> <%= @stats[:lightened] %> </strong> "Street well illuminated" </p>
-         <p> <%= image_tag "main_page_playground.png" %> <strong> <%= @stats[:playgrounds] %> </strong> "Nice playground" </p>
-         <p> <%= image_tag "main_page_dog.png" %> <strong> <%= @stats[:dog_friendly] %> </strong> "Dog friendly" </p>
-       </div>
-     </div>
-   </div>
- </div>
+    <div class="col-xs-4 col-xs-offset-4">
+      <%= link_to "Add your own Review!", new_search_review_path(:search_id => @search.id), class:"buttonNoFillGreen" %>
+    </div>
+  </div>
 </div>
 
-<br><br><br><br>
+<br><br>
+
 <div class="banner201 img201-3">
   <h1>and get a feel of their lifestyle!</h1>
 </div>
-
 

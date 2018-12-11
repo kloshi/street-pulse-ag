@@ -48,59 +48,57 @@ class SearchesController < ApplicationController
       lng: @search.longitude,
       title: @search.address
     })
-    #############################################################
-    #############################################################
+
     ################## creating @stats hash #####################
 
-        # fetching the answers for a review
-        @answers_within_radius =  []
-        @reviews_in_radius.each do |rev|
-          @answers_within_radius << rev.answers.first unless rev.answers.first == nil || rev.answers.first == []
+    # fetching the answers for a review
+    @answers_within_radius = []
+    @reviews_in_radius.each do |rev|
+      @answers_within_radius << rev.answers.first unless rev.answers.first == nil || rev.answers.first == []
+    end
 
-        end
+    # @statistics is a hash with necessary stats calculated
+    @street_average = street_average
+    @commune_average = commune_average
+    @friendliness = average("q7")
+    @events = average("q8")
+    @stay = average("q9")
+    @quiet = average("q10")
+    @green = average("q11")
+    @clean = average("q12")
+    @parking = average("q13")
+    @cars = average("q14")
+    @bikes = average("q15")
+    @transportation = average("q16")
+    @bike_lanes = average("q17")
+    @pavement = average("q18")
+    @lightened = average("q19")
+    @playgrounds = average("q20")
+    @dog_friendly = average("q21")
 
-        # @statistics is a hash with necessary stats calculated
-        @street_average = street_average
-        @commune_average = commune_average
-        @friendliness = average("q7")
-        @events = average("q8")
-        @stay = average("q9")
-        @quiet = average("q10")
-        @green = average("q11")
-        @clean = average("q12")
-        @parking = average("q13")
-        @cars = average("q14")
-        @bikes = average("q15")
-        @transportation = average("q16")
-        @bike_lanes = average("q17")
-        @pavement = average("q18")
-        @lightened = average("q19")
-        @playgrounds = average("q20")
-        @dog_friendly = average("q21")
+    # Here is the stats Hash
+    @stats = {
+      street_average: @street_average,
+      commune_average: @commune_average,
+      friendliness: @friendliness,
+      events: @events,
+      stay: @stay,
+      quiet: @quiet,
+      green: @green,
+      clean: @clean,
+      parking: @parking,
+      cars: @cars,
+      bikes: @bikes,
+      transportation: @transportation,
+      bike_lanes: @bike_lanes,
+      pavement: @pavement,
+      lightened: @lightened,
+      playgrounds: @playgrounds,
+      dog_friendly: @dog_friendly
+    }
 
-        # Here is the stats Hash
-        @stats = {
-          street_average: @street_average,
-          commune_average: @commune_average,
-          friendliness: @friendliness,
-          events: @events,
-          stay: @stay,
-          quiet: @quiet,
-          green: @green,
-          clean: @clean,
-          parking: @parking,
-          cars: @cars,
-          bikes: @bikes,
-          transportation: @transportation,
-          bike_lanes: @bike_lanes,
-          pavement: @pavement,
-          lightened: @lightened,
-          playgrounds: @playgrounds,
-          dog_friendly: @dog_friendly
-        }
-
-        ################## end of @stats hash ############
-        ##################################################
+    ################## end of @stats hash ############
+    ##################################################
 
     # calculate zip_code (for the green marker) for use in main.html.erb
     @zip_code = get_zip_code(@search)
@@ -112,17 +110,7 @@ class SearchesController < ApplicationController
     render :main
   end
 
-
-
-
-
-
-
   private
-
-  ##################################################################
-  ###################################################################
-  ################# computation methods ##########################
 
   ######################### strong params #######################
   def search_params
