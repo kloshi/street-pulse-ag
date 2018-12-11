@@ -70,3 +70,15 @@
   width: 80px;
   border-radius: 50%;
 }
+
+// responsiveness on smaller screens:
+@media screen and (max-width: 991px) {
+  .card-blocks {
+    columns: 2;
+  }
+}
+@media screen and (max-width: 550px) {
+  .card-blocks {
+    columns: 1;
+  }
+}

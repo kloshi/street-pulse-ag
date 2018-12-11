@@ -29,13 +29,6 @@
 }
 
 
-@media screen and (max-width: 767px) {
-  .banner201 h1 {
-    font-size: 9vw;
-  }
-}
-
-
 // =============
 
 .btn-success a {
@@ -159,3 +152,12 @@
 }
 
 
+// responsiveness on smaller screens:
+@media screen and (max-width: 767px) {
+  .banner201 h1 {
+    font-size: 9vw;
+  }
+  .mapContainer {
+    margin: 0 30px;
+  }
+}
