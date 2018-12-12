@@ -16,7 +16,12 @@
           </div>
           <div class="card-body panel-body">
             <!-- image -->
-            <p><%= cl_image_tag r.photo, :width=>'100%', :alt=>"street photo" %></p>
+            <% if r[:photo] == nil %>
+              <%= cl_image_tag "https://res.cloudinary.com/kloshi/image/upload/v1544631385/foto_not_found.png", :width=>'100%', :alt=>"foto_not_found" %>
+            <% else %>
+              <p><%= cl_image_tag r.photo, :width=>'100%', :alt=>"street photo" %></p>
+            <% end %>
+
             <p><strong>Rating:</strong> <%= r.street_review_average_rating %>/5</p>
             <p><strong>From your search:</strong> <%= '%.02f' % r.distance_from(@search.address) %> km away</p>
             <p><strong>Street review:</strong> <br> <%= r.street_review_content.truncate_words(40) %></p>
