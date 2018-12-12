@@ -41,3 +41,89 @@
   border: none;
 }
 
+// new layout:
+
+// 2x CARDS WITH NEIGHBOURHOOD & COMMUNE:
+.card-neighbourhood {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  height: 500px;
+  margin: 20px 0px;
+  background-color: #FFF;
+  -webkit-box-shadow: 2px 1px 5px 0px rgba(100, 100, 100, 0.75);
+  -moz-box-shadow: 2px 1px 5px 0px rgba(100, 100, 100, 0.75);
+  box-shadow: 2px 1px 5px 0px rgba(100, 100, 100, 0.75);
+  border-radius: 3px;
+  h5 {
+    color: #666666;
+    padding: 0 25px;
+    align-self: flex-start;
+    font-size: 2.5rem;
+    font-weight: 500;
+    text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+  }
+  p {
+    color: #666666;
+    align-self: flex-start;
+    text-align: justify;
+    font-size: 1.8rem;
+    margin: 15px 25px;
+  }
+}
+
+.card-neighbourhood-bar {
+  display: flex;
+  align-items: center;
+  margin: 20px;
+  position: relative;
+  height: 72px;
+  width: 93%;
+  background-color: #f5f5f5;;
+  border-radius: 3px;
+  color: white;
+  overflow: visible;
+  h1 {
+    position: absolute;
+    margin: auto;
+    left: 10px;
+    color: #666666;
+    text-align: left;
+    font-size: 2.5rem;
+    font-weight: 500;
+    text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+  }
+  h1 span {
+    color: #fc6a6a;
+    font-weight: bold;
+  }
+  h6 {
+    position: absolute;
+    right: 12px;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-size: 38px;
+    font-weight: 900;
+    text-shadow: 2px 2px rgba(50, 50, 50, 0.2);
+  }
+  h6 span {
+    background: green;
+    -moz-box-shadow: 0 0 0 10px green;
+    -webkit-box-shadow: 0 0 0 10px green;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px green;
+    padding-right: 2px;
+  }
+
+}
+
+// responsiveness on smaller screens:
+@media screen and (max-width: 992px) and (min-width: 769px) {
+  .card-neighbourhood-bar h1 {
+    font-size: 2rem;
+  }
+}

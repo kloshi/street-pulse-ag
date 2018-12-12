@@ -1,4 +1,47 @@
 
+<!-- New layout neighbourhood + commune -->
+
+<div class="container" style="margin-bottom: 30px;">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6">
+
+      <!-- first card -->
+      <div class="card-neighbourhood">
+
+        <div class="card-neighbourhood-bar">
+          <h1><span>This neighborhood</span><br> general rating:</h1>
+          <h6> <span><%= @stats[:street_average] %></span> </h6>
+        </div>
+
+        <h5><%= @search.address %></h5>
+
+      </div>
+    </div>
+
+    <!-- second card -->
+    <div class="col-xs-12 col-sm-6">
+      <div class="card-neighbourhood">
+
+        <div class="card-neighbourhood-bar">
+          <h1><span>The surrounding commune</span><br> general rating:</h1>
+          <h6> <span><%= @stats[:commune_average] %></span> </h6>
+        </div>
+
+        <h5><%= @commune.name %></h5>
+        <p><strong>Commune description: </strong><%= @commune.description.truncate_words(50) %>
+        <br><br>
+        <button type="button" class="buttonNoFill" data-toggle="modal" data-target="#modalCommuneDesc">Read more...</button>
+        </p>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ================================== -->
+
+
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
@@ -18,12 +61,12 @@
           <!-- MODAL START -->
           <div class="commune-modal">
             <!-- Button to Open the Modal -->
-            <button type="button" class="buttonNoFill" data-toggle="modal" data-target="#myModal">
+            <button type="button" class="buttonNoFill" data-toggle="modal" data-target="#modalCommuneDesc">
               Read more...
             </button>
 
             <!-- The Modal -->
-            <div class="modal fade" id="myModal">
+            <div class="modal fade" id="modalCommuneDesc">
               <div class="modal-dialog modal-lg">
                 <div class="modal-content"  >
 
