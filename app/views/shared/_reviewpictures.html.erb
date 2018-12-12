@@ -14,7 +14,8 @@
           <h6> <span><%= @stats[:street_average] %></span> </h6>
         </div>
 
-        <h5>Area: <%= @search.address %> (r = <%= @search.radius %>m)</h5>
+        <h5><%= @search.address %></h5>
+         <!-- (r = <%= @search.radius %>m) -->
 
         <div class="userImageSlider">
           <!-- NEW SLIDER (bootstrap carousel) -->
@@ -27,7 +28,7 @@
 
                 <% if @reviews_in_radius.size == 0 %>
                   <div class="item active">
-                  <%= cl_image_tag "https://res.cloudinary.com/kloshi/image/upload/v1544631385/foto_not_found.png", :width=>505, :height=>300, :crop => "fill", :alt=>"foto_not_found" %>
+                  <%= cl_image_tag "https://res.cloudinary.com/kloshi/image/upload/v1544631385/foto_not_found.png", :width=>505, :crop => "fill", :alt=>"foto_not_found" %>
                   </div>
                   <% counter += 1 %>
                 <% end %>
@@ -44,9 +45,9 @@
 
 
                 <% if r[:photo] == nil %>
-                  <%= cl_image_tag "https://res.cloudinary.com/kloshi/image/upload/v1544631385/foto_not_found.png", :width=>505, :height=>300, :crop => "fill", :alt=>"foto_not_found" %>
+                  <%= cl_image_tag "https://res.cloudinary.com/kloshi/image/upload/v1544631385/foto_not_found.png", :width=>505, :crop => "fill", :alt=>"foto_not_found" %>
                 <% else %>
-                  <%= cl_image_tag r.photo, :width=>505, :height=>300, :crop => "fill", :alt=>"street photo" %>
+                  <%= cl_image_tag r.photo, :width=>505, :crop => "fill", :alt=>"street photo" %>
                 <% end %>
                 </div>
 
