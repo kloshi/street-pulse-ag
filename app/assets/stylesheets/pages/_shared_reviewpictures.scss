@@ -50,7 +50,7 @@
   align-items: center;
   justify-content: flex-start;
   position: relative;
-  height: 550px;
+  height: 600px;
   margin: 20px 0px;
   background-color: #FFF;
   -webkit-box-shadow: 2px 1px 5px 0px rgba(100, 100, 100, 0.75);
@@ -96,6 +96,17 @@
     -moz-box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.5);
     -webkit-box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.5);
     box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.5);
+  }
+  .carousel-inner > .item > .user-avatar {
+    position: absolute; // test (original: absolute)
+    right: 22px;
+    top: 22px;
+    height: 60px;
+    width: 60px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: white;
+    border-radius: 50%;
   }
 }
 
@@ -151,4 +162,12 @@
   .card-neighbourhood-bar h1 {
     font-size: 2rem;
   }
+}
+@media screen and (max-width: 768px) {
+  .card-neighbourhood .carousel-inner > .item > .user-avatar {
+    right: 20px;
+    top: 15px;
+    height: 43px;
+    width: 43px;
+    }
 }
