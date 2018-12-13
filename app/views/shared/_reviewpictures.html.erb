@@ -4,7 +4,7 @@
 
 <div class="container" style="margin-bottom: 30px;">
   <div class="row">
-    <div class="col-xs-12 col-sm-6">
+    <div class="col-xs-12 col-sm-7">
 
       <!-- first card -->
       <div class="card-neighbourhood">
@@ -28,7 +28,7 @@
 
                 <% if @reviews_in_radius.size == 0 %>
                   <div class="item active">
-                  <%= cl_image_tag "https://res.cloudinary.com/kloshi/image/upload/v1544631385/foto_not_found.png", :width=>505, :crop => "fill", :alt=>"foto_not_found" %>
+                  <%= cl_image_tag "https://res.cloudinary.com/kloshi/image/upload/v1544631385/foto_not_found.png", :width=>655, :crop => "fill", :alt=>"foto_not_found" %>
                   </div>
                   <% counter += 1 %>
                 <% end %>
@@ -45,10 +45,13 @@
 
 
                 <% if r[:photo] == nil %>
-                  <%= cl_image_tag "https://res.cloudinary.com/kloshi/image/upload/v1544631385/foto_not_found.png", :width=>505, :crop => "fill", :alt=>"foto_not_found" %>
+                  <%= cl_image_tag "https://res.cloudinary.com/kloshi/image/upload/v1544631385/foto_not_found.png", :width=>655, :crop => "fill", :alt=>"foto_not_found" %>
                 <% else %>
-                  <%= cl_image_tag r.photo, :width=>505, :crop => "fill", :alt=>"street photo" %>
+                  <%= cl_image_tag r.photo, :width=>655, :crop => "fill", :alt=>"street photo" %>
                 <% end %>
+                <div class="carousel-caption">
+                  <p><span><%= r.street_review_title %></span></p>
+                </div>
                 </div>
 
                 <% end %>
@@ -84,7 +87,7 @@
     <!-- end col -->
 
     <!-- second card -->
-    <div class="col-xs-12 col-sm-6">
+    <div class="col-xs-12 col-sm-5">
       <div class="card-neighbourhood">
 
         <div class="card-neighbourhood-bar">
