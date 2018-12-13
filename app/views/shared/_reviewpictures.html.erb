@@ -1,12 +1,11 @@
+<!-- SECTION 2: USER PHOTOS & INFOS ON COMMUNE -->
+
 <br><br>
-
-<!-- New layout neighbourhood + commune -->
-
 <div class="container" style="margin-bottom: 30px;">
   <div class="row">
     <div class="col-xs-12 col-sm-7">
 
-      <!-- first card -->
+      <!-- CARD 1: Street rating & user photos -->
       <div class="card-neighbourhood">
 
         <div class="card-neighbourhood-bar">
@@ -18,7 +17,7 @@
          <!-- (r = <%= @search.radius %>m) -->
 
         <div class="userImageSlider">
-          <!-- NEW SLIDER (bootstrap carousel) -->
+          <!-- Photos carousel (from bootstrap) -->
             <div id="myCarousel" class="carousel slide" style="margin: 0px 25px;">
 
               <!-- Wrapper for slides -->
@@ -96,7 +95,7 @@
     </div>
     <!-- end col -->
 
-    <!-- second card -->
+    <!-- CARD 2: Commune rating & description -->
     <div class="col-xs-12 col-sm-5">
       <div class="card-neighbourhood">
 
@@ -125,8 +124,8 @@
 
 <br><br><br>
 
+<!-- JScript for the photos carousel -->
 <script>
-  // console.log("HELLO FROM THE CAROUSEL SCRIPT!!!")
   $(document).ready(function(){
     // Activate Carousel
     $("#myCarousel").carousel({interval: 2500});
@@ -142,7 +141,7 @@
 </script>
 
 
-<!-- The Modal -->
+<!-- Commune Description Modal -->
 <div class="modal fade" id="modalCommuneDesc">
   <div class="modal-dialog modal-lg">
     <div class="modal-content"  >

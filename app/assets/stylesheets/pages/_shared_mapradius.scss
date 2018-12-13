@@ -29,7 +29,7 @@
 }
 
 
-// =============
+// ======old=======
 
 .btn-success a {
   color: white
@@ -64,7 +64,7 @@
   color:  #32B796;
 
 }
-
+// ==========
 
 // new design
 
@@ -151,6 +151,9 @@
   border-radius: 2px;
 }
 
+.modal-title {
+  width: 80%;
+}
 
 // responsiveness on smaller screens:
 @media screen and (max-width: 767px) {

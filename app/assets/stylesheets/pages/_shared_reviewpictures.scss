@@ -1,32 +1,32 @@
 // section Picture
 .cardGridPicture {
- height: 400px;
- margin-top: 100px;
- margin-left: 60px;
- margin-right: 60px;
- margin-bottom: 80px;
- background-size: cover !important;
- border: none;
- display: grid;
- grid-template-rows: 1fr 1fr;
- grid-template-columns: 60% 40%;
+ // height: 400px;
+ // margin-top: 100px;
+ // margin-left: 60px;
+ // margin-right: 60px;
+ // margin-bottom: 80px;
+ // background-size: cover !important;
+ // border: none;
+ // display: grid;
+ // grid-template-rows: 1fr 1fr;
+ // grid-template-columns: 60% 40%;
 }
 .cardPictureCommune {
-  grid-row: 1/span 1;
-  grid-column: 1/span 1;
-  position: relative;
-  margin-right: 30px;
+  // grid-row: 1/span 1;
+  // grid-column: 1/span 1;
+  // position: relative;
+  // margin-right: 30px;
 }
 .commune-modal {
   position: absolute;
 }
 .smallcardPictureNeightbourhood {
-  grid-row: 2/span 1;
-  grid-column: 1/span 1;
-  display: flex;
-  justify-content: space-around;
-  position: relative;
-  margin-top: 100px;
+  // grid-row: 2/span 1;
+  // grid-column: 1/span 1;
+  // display: flex;
+  // justify-content: space-around;
+  // position: relative;
+  // margin-top: 100px;
 }
 .pictures-modal{
   position: absolute;
@@ -34,15 +34,14 @@
   right: 20px;
 }
 .bigcardPictureNeighbourhood {
-  grid-row: 1/span 2;
-  grid-column: 2/span 1;
-  height: 450px;
-  background-size: cover !important;
-  border: none;
+  // grid-row: 1/span 2;
+  // grid-column: 2/span 1;
+  // height: 450px;
+  // background-size: cover !important;
+  // border: none;
 }
 
 // new layout:
-
 // 2x CARDS WITH NEIGHBOURHOOD & COMMUNE:
 .card-neighbourhood {
   display: flex;
@@ -170,4 +169,7 @@
     height: 43px;
     width: 43px;
     }
+  .card-neighbourhood-bar h6 {
+   font-size: 28px;
+  }
 }

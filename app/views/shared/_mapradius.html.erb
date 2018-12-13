@@ -1,3 +1,5 @@
+<!-- SECTION 1: MAP + SEARCH BAR ADDRESS & RADIUS -->
+
 <div class="banner201 img201-1">
   <h1>Discover your future neighbourhood!</h1>
 </div>
@@ -100,9 +102,15 @@
             <strong>From user:</strong>
             <%= r.user.email %>
           </p>
+
           <p>
-            <%= cl_image_tag r.photo, :width=>'100%', :alt=>"street photo" %>
+            <% if r[:photo] == nil %>
+            <%= cl_image_tag "https://res.cloudinary.com/kloshi/image/upload/v1544631385/foto_not_found.png", :width=>"100%", :height=>500, :crop => "fill", :alt=>"foto_not_found" %>
+            <% else %>
+              <%= cl_image_tag r.photo, :width=>'100%', :alt=>"street photo" %>
+            <% end %>
           </p>
+
         </div>
 
         <div class="modal-footer">

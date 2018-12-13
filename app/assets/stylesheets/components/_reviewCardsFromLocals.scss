@@ -71,10 +71,20 @@
   border-radius: 50%;
 }
 
+.modal-title {
+  width: 80%;
+}
+
 // responsiveness on smaller screens:
 @media screen and (max-width: 991px) {
   .card-blocks {
     columns: 2;
+  }
+  .card-user-in-modal {
+    right: 36px;
+    top: 25px;
+    height: 60px;
+    width: 60px;
   }
 }
 @media screen and (max-width: 550px) {
