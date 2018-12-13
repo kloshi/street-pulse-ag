@@ -12,6 +12,14 @@ class ReviewsController < ApplicationController
   def new
     @search = Search.find(params[:search_id])
     @review = Review.new
+    # prepare to be able to display current rating for this commune on the static map
+    @reviews_in_radius = Review.near(@search.address, 1)
+    @answers_within_radius = []
+    @reviews_in_radius.each do |rev|
+      @answers_within_radius << rev.answers.first unless rev.answers.first == nil || rev.answers.first == []
+    end
+    @street_average = street_average
+    # =========
     @staticmap = static_map_for(@search)
     # @commune = get_commune(@search) # fetch communune based on user input address
     @zip_code = get_zip_code(@search)
@@ -52,7 +60,7 @@ class ReviewsController < ApplicationController
     params = {
       :center => [location.latitude, location.longitude].join(","),
       :zoom => 16,
-      :size => "600x370",
+      :size => "1000x250",
       :markers => [location.latitude, location.longitude].join(","),
       :key => ENV['GOOGLE_API_SERVER_KEY']
     }

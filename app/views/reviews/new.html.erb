@@ -1,28 +1,52 @@
-<div class="review-hero-image">
-  <div class="review-title">
-    <h3> <strong> Your review is precious for the others! </strong> </h3>
-  </div>
+<!-- NEW REVIEW - 1st part of the form -->
+
+<div class="banner201 img201-4">
+  <h1>Your review is really precious to others!</h1>
 </div>
 
+
+<br><br>
+<div class="container" style="margin-bottom: 30px;">
+  <div class="row">
+
+    <!-- 1. div with the map  -->
+    <div class="col-xs-12">
+      <div class="card-neighbourhood" style="padding: 0px 15px;">
+        <h2>Write a review for the following neighborhood:</h2>
+
+        <!-- current rating for this street -->
+        <div class="card-neighbourhood-bar for-static-map" style="max-width: 640px;">
+          <h1 style="width: 75%;">This neighborhood <span>current rating:</span></h1>
+          <h6> <span><%= @street_average %></span> </h6>
+        </div>
+
+        <!-- static map -->
+        <div class="staticmap">
+          <%= image_tag @staticmap, :width=>"100%", :alt => @search.address %>
+        </div>
+
+        <!-- address field + "update address button" -->
+        <div class="reviewAddress">
+        <%= form_tag(controller: "searches", action: "create", method: "post") do %>
+        <%= text_field_tag :search, @search.address %>
+        <%= hidden_field_tag :update_address, "yes" %>
+        </div>
+        <div class="reviewAddressUpdate">
+        <%= submit_tag("Update address", :class=>"btn btn-primary btn-block", :style=>"margin:15px") %>
+        <!-- TO CHANGE!!!!! -->
+        <% end %>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</div>
 
 
 <div class="row">
   <div class="col-xs-10 col-xs-10-offset-1">
 
-    <div class="MapSearchReview", style="margin-top:15px">
-      <h5><strong> Street Name: </strong></h5>
-      <%= form_tag(controller: "searches", action: "create", method: "post") do %>
-      <%= text_field_tag :search, @search.address %>
-      <%= hidden_field_tag :update_address, "yes" %>
-      <%= submit_tag("Update address", :class=>"btn btn-primary", :style=>"margin:15px") %>
-      <!-- TO CHANGE!!!!! -->
-      <% end %>
-
-      <!-- add static image - a map centered to address given by user -->
-      <div class="staticmap">
-        <%= image_tag @staticmap, :alt => @search.address %>
-      </div>
-    </div>
 
     <div class="review-content", style="display: flex">
       <div class="card-Review-Street">

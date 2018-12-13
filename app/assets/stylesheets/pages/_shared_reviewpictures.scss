@@ -74,6 +74,39 @@
       text-decoration: none;
     }
   }
+  .staticmap {
+    // margin: 10px;
+    // position: relative;
+    box-shadow: 1px 1px 5px 0px rgba(150, 150, 150, 0.75);
+  }
+  .for-static-map {
+    width: 100%;
+    margin: 20px 0px;
+    box-shadow: 1px 1px 5px 0px rgba(150, 150, 150, 0.75);
+    border-radius: 2px;
+  }
+  .reviewAddress {
+    margin: 20px 0px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 640px;
+    #search {
+      width: 640px;
+      // box-sizing: border-box;
+      border: 1px solid #ccc;
+      height: 40px;
+      resize: vertical;
+      border-radius: 3px;
+      text-align: center;
+      padding: 3px 0px;
+      box-shadow: 1px 1px 2px 0px rgba(150, 150, 150, 0.75);
+    }
+  }
+
+  .reviewAddressUpdate {
+
+  }
   .userImageSlider {
     // margin: 20px 20px;
     // width: 100%
