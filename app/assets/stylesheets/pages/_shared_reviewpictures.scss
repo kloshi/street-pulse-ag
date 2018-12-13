@@ -60,8 +60,16 @@
     color: #666666;
     padding: 0 25px;
     align-self: flex-start;
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     font-weight: 500;
+    text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+  }
+  h2 {
+    color: #666666;
+    // padding: 0 25px;
+    align-self: center;
+    font-size: 3.5rem;
+    font-weight: 700;
     text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
   }
   p {
@@ -103,9 +111,9 @@
       box-shadow: 1px 1px 2px 0px rgba(150, 150, 150, 0.75);
     }
   }
-
   .reviewAddressUpdate {
-
+    width: 640px;
+    margin-bottom: 20px;
   }
   .userImageSlider {
     // margin: 20px 20px;
@@ -123,7 +131,7 @@
     text-align: center;
     font-size: 1.5rem;
   }
-   .carousel-inner > .item > .carousel-caption > p span {
+  .carousel-inner > .item > .carousel-caption > p span {
     background: rgba(0, 0, 0, 0.5);
     -moz-box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.5);
     -webkit-box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.5);
@@ -201,8 +209,15 @@
     top: 15px;
     height: 43px;
     width: 43px;
-    }
-  .card-neighbourhood-bar h6 {
-   font-size: 28px;
+  }
+  .card-neighbourhood h2 {
+   font-size: 25px;
+   }
+  .card-neighbourhood .reviewAddress #search {
+    width: 100% !important;
+  }
+  .reviewAddressUpdate {
+   width: 100% !important;
   }
 }
+

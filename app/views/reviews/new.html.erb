@@ -32,7 +32,7 @@
         <%= hidden_field_tag :update_address, "yes" %>
         </div>
         <div class="reviewAddressUpdate">
-        <%= submit_tag("Update address", :class=>"btn btn-primary btn-block", :style=>"margin:15px") %>
+        <%= submit_tag("Update address", :class=>"btn btn-primary btn-block") %>
         <!-- TO CHANGE!!!!! -->
         <% end %>
         </div>
@@ -111,14 +111,14 @@
           <p> <%= f.input :commune_review_content, :label => "Your Review" %> </p>
         </div>
 
-      </div>
-
-
-
       <div class="confirm">
         <%= f.button :submit, "Confirm - Next > ", class: "btn btn-primary" %>
         <% end  %>
       </div>
+
+      </div>
+
+
 
     </div>
   </div>
