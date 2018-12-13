@@ -45,11 +45,17 @@
 
 
                 <% if r[:photo] == nil %>
+                  <a data-toggle="modal" data-target="#reviewModal-<%= r.id %>" style="cursor: pointer;">
                   <%= cl_image_tag "https://res.cloudinary.com/kloshi/image/upload/v1544631385/foto_not_found.png", :width=>655, :crop => "fill", :alt=>"foto_not_found" %>
+                  </a>
                 <% else %>
+                  <a data-toggle="modal" data-target="#reviewModal-<%= r.id %>" style="cursor: pointer;">
                   <%= cl_image_tag r.photo, :width=>655, :crop => "fill", :alt=>"street photo" %>
+                  </a>
                 <% end %>
-                <div class="carousel-caption">
+
+
+                <div class="carousel-caption" data-toggle="modal" data-target="#reviewModal-<%= r.id %>" style="cursor: pointer;">
                   <p><span><%= r.street_review_title %></span></p>
                 </div>
 
