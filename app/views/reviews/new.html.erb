@@ -44,11 +44,11 @@
   </div>
 </div>
 
-
 <!-- second container -->
 <div class="container">
   <div class="row">
 
+    <!-- start of the form -->
     <%= simple_form_for [@search, @review] do |f| %>
 
     <!-- column "street review" -->
@@ -116,7 +116,7 @@
     </div>
     <!-- ENDcolumn "commune review" -->
 
-    <!-- Submit button -->
+    <!-- column submit button -->
     <div class="col-xs-12 col-sm-6 col-sm-offset-3">
       <div>
         <%= f.button :submit, "Confirm - Next > ", class: "btn btn-primary btn-block", style: "font-weight: bold;" %>
@@ -124,89 +124,11 @@
     </div>
 
     <% end %>
+    <!-- end of the form -->
+
   </div>
 </div>
 
 <br><br>
 
 <!-- =============== -->
-
-<!-- <div class="row">
-  <div class="col-xs-10 col-xs-10-offset-1">
-
-    <div class="review-content", style="display: flex">
-      <div class="card-Review-Street">
-
-        <div class="color-street">
-          <h4><strong> Regarding the street... </strong></h4>
-        </div>
-
-        <h4> <strong> " <%= @search.address %> "  </strong> </h4>
-
-        <%= simple_form_for [@search, @review] do |f| %>
-
-        <div style="padding-top: 30px;">
-          <h5>
-            <p>
-              <label style="margin-bottom: 25px;">Your general appreciation of the street</label>
-            <input type="range" name="review[street_review_average_rating]" list="tickmarks" min="0" max="5" step="1">
-
-            <datalist id="tickmarks">
-              <option value="0" label="0">
-              <option value="1" label="1">
-              <option value="2" label="2">
-              <option value="3" label="3">
-              <option value="4" label="4">
-              <option value="5" label="5">
-            </datalist>
-            </p>
-           </h5>
-          <h5> <%= f.input :street_review_title, :label => "Your Review Title" %> </h5>
-          <h5> <%= f.input :street_review_content, :label => "Your Review" %> </h5>
-          <h5> <%= f.input :photo, :label => "picture of your neighbourhood" %></h5>
-          <h5> <%= f.input :photo_cache, as: :hidden %></h5>
-
-        </div>
-
-      </div>
-
-      <div class="card-Review-Commune"">
-        <div class="color-commune">
-          <h4><strong>Regarding the commune...</strong></h4>
-
-        </div>
-
-        <h4> <strong> "<%= @commune.name %>" </strong> </h4>
-
-        <div style="padding-top: 30px;">
-          <p>
-            <p>
-              <label style="margin-bottom: 25px;">Your general appreciation of the commune</label>
-            <input type="range" name="review[commune_review_average_rating]" list="tickmarks" min="0" max="5" step="1">
-
-            <datalist id="tickmarks">
-              <option value="0" label="0">
-              <option value="1" label="1">
-              <option value="2" label="2">
-              <option value="3" label="3">
-              <option value="4" label="4">
-              <option value="5" label="5">
-            </datalist>
-            </p>
-           </p>
-          <p> <%= f.input :commune_review_title, :label => "Your Review Title" %> </p>
-          <p> <%= f.input :commune_review_content, :label => "Your Review" %> </p>
-        </div>
-
-      <div class="confirm">
-        <%= f.button :submit, "Confirm - Next > ", class: "btn btn-primary" %>
-        <% end  %>
-      </div>
-
-      </div>
-
-
-
-    </div>
-  </div>
-</div> -->

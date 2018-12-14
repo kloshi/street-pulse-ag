@@ -1,3 +1,147 @@
+// NEW css:
+
+.short-h {
+  height: 300px;
+}
+.medium-h {
+  height: 550px;
+}
+.large-h {
+  height: 815px;
+}
+
+.card-question {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  // height: 600px;
+  // height: 320px;
+  margin: 20px 0px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #FFF;
+  -webkit-box-shadow: 2px 1px 5px 0px rgba(100, 100, 100, 0.75);
+  -moz-box-shadow: 2px 1px 5px 0px rgba(100, 100, 100, 0.75);
+  box-shadow: 2px 1px 5px 0px rgba(100, 100, 100, 0.75);
+  border-radius: 3px;
+  overflow: hidden;
+  img {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+  h5 {
+    width:80%;
+    color: #666666;
+    padding: 0 25px;
+    align-self: flex-start;
+    font-size: 2.2rem;
+    font-weight: 500;
+    text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+  }
+  h2 {
+    color: #666666;
+    // padding: 0 25px;
+    align-self: center;
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+  }
+  p {
+    color: #666666;
+    align-self: flex-start;
+    text-align: justify;
+    font-size: 1.8rem;
+    margin: 15px 25px;
+    a {
+      text-decoration: none;
+    }
+  }
+  .form-group {
+    margin-bottom: 15px;
+    width: 100%;
+    padding: 0px 25px;
+  }
+  label {
+    padding-left: 10px;
+  }
+  .review-form {
+    margin-top: 20px;
+    width:90%;
+    padding-bottom: 15px;
+    label {
+      padding-left: 0px;
+    }
+  }
+}
+
+.card-question-bar {
+  display: flex;
+  align-items: center;
+  margin: 20px;
+  position: relative;
+  height: 72px;
+  width: 93%;
+  background-color: #f5f5f5;;
+  border-radius: 3px;
+  color: white;
+  overflow: visible;
+  h1, h2 {
+    position: absolute;
+    margin: auto;
+    width:80%;
+    left: 10px;
+    color: #666666;
+    text-align: left;
+    font-size: 2.1rem;
+    font-weight: 500;
+    text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+  }
+  h1 span {
+    color: #fc6a6a;
+    font-weight: bold;
+  }
+  h2 span {
+    color: #32B796;
+    font-weight: bold;
+  }
+  h6 {
+    position: absolute;
+    right: 12px;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-size: 38px;
+    font-weight: 900;
+    text-shadow: 2px 2px rgba(50, 50, 50, 0.2);
+  }
+  h6 span {
+    background: green;
+    -moz-box-shadow: 0 0 0 10px green;
+    -webkit-box-shadow: 0 0 0 10px green;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px green;
+    padding-right: 2px;
+  }
+  img {
+    position: absolute;
+    right: 10px;
+    top: auto;
+  }
+}
+
+
+@media screen and (max-width: 767px) {
+  .card-question {
+    height:100%;
+  }
+}
+
+
+// OLD css
 
 .review2-hero-image {
    /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */

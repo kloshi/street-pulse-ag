@@ -2,7 +2,6 @@
 
 
 
-
 // =====================
 
 
@@ -65,36 +64,36 @@
     color: #32B796;
     // margin-bottom: 40px;
   }
-  .cards{
-    display: flex;
-    justify-content: space-between;
-  }
-  .card-Review-Street {
-    width: 50%;
-    padding: 20px;
-    margin: 20px;
-    margin-left: 180px;
-    height: 600px;
-    box-shadow: 0 0px 0px rgba(0,0,0,0.6);
-    background-size: cover !important;
-    background-color: #FFF;
-    border: none;
-    &:hover {
-      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    }
-  }
+  // .cards{
+  //   display: flex;
+  //   justify-content: space-between;
+  // }
+  // .card-Review-Street {
+  //   width: 50%;
+  //   padding: 20px;
+  //   margin: 20px;
+  //   margin-left: 180px;
+  //   height: 600px;
+  //   box-shadow: 0 0px 0px rgba(0,0,0,0.6);
+  //   background-size: cover !important;
+  //   background-color: #FFF;
+  //   border: none;
+  //   &:hover {
+  //     box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  //   }
+  // }
 
-  .card-Review-Commune {
-    width: 50%;
-    padding: 20px;
-    margin: 20px;
-    height: 600px;
-    border: none;
-    box-shadow: 0 0px 0px rgba(0,0,0,0.6);
-    background-size: cover !important;
-    background-color: #FFF;
-    &:hover {
-      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    }
-  }
+  // .card-Review-Commune {
+  //   width: 50%;
+  //   padding: 20px;
+  //   margin: 20px;
+  //   height: 600px;
+  //   border: none;
+  //   box-shadow: 0 0px 0px rgba(0,0,0,0.6);
+  //   background-size: cover !important;
+  //   background-color: #FFF;
+  //   &:hover {
+  //     box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  //   }
+  // }
 
