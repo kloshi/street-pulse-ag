@@ -51,6 +51,7 @@
   position: relative;
   height: 600px;
   margin: 20px 0px;
+  padding-bottom: 10px;
   background-color: #FFF;
   -webkit-box-shadow: 2px 1px 5px 0px rgba(100, 100, 100, 0.75);
   -moz-box-shadow: 2px 1px 5px 0px rgba(100, 100, 100, 0.75);
@@ -112,7 +113,8 @@
     }
   }
   .reviewAddressUpdate {
-    width: 640px;
+    width: 100%;
+    max-width: 640px;
     margin-bottom: 20px;
   }
   .userImageSlider {
@@ -148,6 +150,11 @@
     border-color: white;
     border-radius: 50%;
   }
+  .review-form {
+    margin-top: 20px;
+    width:90%;
+    padding-bottom: 15px;
+  }
 }
 
 .card-neighbourhood-bar {
@@ -161,7 +168,7 @@
   border-radius: 3px;
   color: white;
   overflow: visible;
-  h1 {
+  h1, h2 {
     position: absolute;
     margin: auto;
     left: 10px;
@@ -173,6 +180,10 @@
   }
   h1 span {
     color: #fc6a6a;
+    font-weight: bold;
+  }
+  h2 span {
+    color: #32B796;
     font-weight: bold;
   }
   h6 {
@@ -214,10 +225,14 @@
    font-size: 25px;
    }
   .card-neighbourhood .reviewAddress #search {
-    width: 100% !important;
+    width: 107% !important;
   }
-  .reviewAddressUpdate {
-   width: 100% !important;
+  .card-neighbourhood-bar h6 {
+    font-size: 3rem;
   }
 }
-
+@media screen and (max-width: 767px) {
+  .card-neighbourhood {
+    height:100%;
+  }
+}

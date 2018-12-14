@@ -1,11 +1,13 @@
 <!-- NEW REVIEW - 1st part of the form -->
 
+<!-- banner -->
 <div class="banner201 img201-4">
   <h1>Your review is really precious to others!</h1>
 </div>
 
-
 <br><br>
+
+<!-- first container -->
 <div class="container" style="margin-bottom: 30px;">
   <div class="row">
 
@@ -14,17 +16,6 @@
       <div class="card-neighbourhood" style="padding: 0px 15px;">
         <h2>Write a review for the following neighborhood:</h2>
 
-        <!-- current rating for this street -->
-        <div class="card-neighbourhood-bar for-static-map" style="max-width: 640px;">
-          <h1 style="width: 75%;">This neighborhood <span>current rating:</span></h1>
-          <h6> <span><%= @street_average %></span> </h6>
-        </div>
-
-        <!-- static map -->
-        <div class="staticmap">
-          <%= image_tag @staticmap, :width=>"100%", :alt => @search.address %>
-        </div>
-
         <!-- address field + "update address button" -->
         <div class="reviewAddress">
         <%= form_tag(controller: "searches", action: "create", method: "post") do %>
@@ -32,9 +23,19 @@
         <%= hidden_field_tag :update_address, "yes" %>
         </div>
         <div class="reviewAddressUpdate">
-        <%= submit_tag("Update address", :class=>"btn btn-primary btn-block") %>
-        <!-- TO CHANGE!!!!! -->
+        <%= submit_tag("Update address", :class=>"btn btn-primary btn-block", style: "font-weight: bold;") %>
         <% end %>
+        </div>
+
+        <!-- static map -->
+        <div class="staticmap">
+          <%= image_tag @staticmap, :width=>"100%", :alt => @search.address %>
+        </div>
+
+        <!-- current rating for this street -->
+        <div class="card-neighbourhood-bar for-static-map" style="max-width: 640px;">
+          <h1 style="width: 75%;">This neighborhood <span>current rating:</span></h1>
+          <h6> <span><%= @street_average %></span> </h6>
         </div>
 
 
@@ -44,9 +45,94 @@
 </div>
 
 
-<div class="row">
-  <div class="col-xs-10 col-xs-10-offset-1">
+<!-- second container -->
+<div class="container">
+  <div class="row">
 
+    <%= simple_form_for [@search, @review] do |f| %>
+
+    <!-- column "street review" -->
+    <div class="col-xs-12 col-sm-6">
+      <div class="card-neighbourhood" style="padding: 0px 15px;">
+
+        <div class="card-neighbourhood-bar">
+          <h1><span>Rate the street:</span></h1>
+        </div>
+
+        <h4><strong><%= @search.address %></strong></h4>
+
+        <div class="review-form">
+          <label style="margin-bottom: 25px;">Your general appreciation of the street</label>
+          <input type="range" name="review[street_review_average_rating]" list="tickmarks" min="0" max="5" step="1">
+
+          <datalist id="tickmarks">
+            <option value="0" label="0">
+            <option value="1" label="1">
+            <option value="2" label="2">
+            <option value="3" label="3">
+            <option value="4" label="4">
+            <option value="5" label="5">
+          </datalist>
+
+          <%= f.input :street_review_title, :label => "Your Review Title" %>
+          <%= f.input :street_review_content, :label => "Your Review" %>
+          <%= f.input :photo, :label => "Photo of your neighbourhood" %>
+          <%= f.input :photo_cache, as: :hidden %>
+        </div>
+
+      </div>
+    </div>
+    <!-- END column "street review" -->
+
+
+    <!-- column "commune review" -->
+    <div class="col-xs-12 col-sm-6">
+      <div class="card-neighbourhood" style="padding: 0px 15px;">
+
+        <div class="card-neighbourhood-bar">
+          <h2><span>Rate the surrounding commune:</span></h2>
+        </div>
+
+        <h4><strong><%= @commune.name %></strong></h4>
+
+        <div class="review-form">
+          <label style="margin-bottom: 25px;">Your general appreciation of the commune</label>
+          <input type="range" name="review[commune_review_average_rating]" list="tickmarks" min="0" max="5" step="1">
+
+          <datalist id="tickmarks">
+            <option value="0" label="0"></option>
+            <option value="1" label="1"></option>
+            <option value="2" label="2"></option>
+            <option value="3" label="3"></option>
+            <option value="4" label="4"></option>
+            <option value="5" label="5"></option>
+          </datalist>
+
+          <%= f.input :commune_review_title, :label => "Your Review Title" %>
+          <%= f.input :commune_review_content, :label => "Your Review" %>
+        </div>
+
+      </div>
+    </div>
+    <!-- ENDcolumn "commune review" -->
+
+    <!-- Submit button -->
+    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+      <div>
+        <%= f.button :submit, "Confirm - Next > ", class: "btn btn-primary btn-block", style: "font-weight: bold;" %>
+      </div>
+    </div>
+
+    <% end %>
+  </div>
+</div>
+
+<br><br>
+
+<!-- =============== -->
+
+<!-- <div class="row">
+  <div class="col-xs-10 col-xs-10-offset-1">
 
     <div class="review-content", style="display: flex">
       <div class="card-Review-Street">
@@ -56,6 +142,7 @@
         </div>
 
         <h4> <strong> " <%= @search.address %> "  </strong> </h4>
+
         <%= simple_form_for [@search, @review] do |f| %>
 
         <div style="padding-top: 30px;">
@@ -122,4 +209,4 @@
 
     </div>
   </div>
-</div>
+</div> -->
