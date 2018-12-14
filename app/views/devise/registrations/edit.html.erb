@@ -1,21 +1,35 @@
+<!-- EDIT USER PROFILE PAGE -->
+
+<div class="banner201 img201-6">
+  <h1>Discover your future neighbourhood!</h1>
+</div>
+
+<br>
+
 <div class="container">
   <div class="row">
-    <div class="col-xs-12 col-sm-4">
-      <div class="profile_page">
-        <div class="profile_page_infos">
-          <div style="overflow-y:scroll; overflow-x:hidden; height:520px;">
+    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+
+      <div class="profile_page_infos">
+
+        <div class="user-profile-bar">
+          <h1><span>User profile</span></h1>
+          <!-- avatar image -->
+          <%= cl_image_tag current_user.photo, width: 90, height: 90, crop: :thumb, gravity: :face %>
+        </div>
+
             <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
             <%= f.error_notification %>
 
             <div class="form-inputs" >
 
               <%= f.input :f_name, :label => "First name",
-              input_html: { autocomplete: "f_name" }, class:"profile_page_form", :input_html => {:style => 'width: 450px'}  %>
+              input_html: { autocomplete: "f_name" }, class:"profile_page_form", :input_html => {:style => ''}  %>
 
               <%= f.input :l_name, :label => "Last name",
-              input_html: { autocomplete: "l_name" }, :input_html => {:style => 'width: 450px'} %>
+              input_html: { autocomplete: "l_name" }, :input_html => {:style => ''} %>
 
-              <%= f.input :email, required: true, autofocus: true, :input_html => {:style => 'width: 450px'} %>
+              <%= f.input :email, required: true, autofocus: true, :input_html => {:style => ''} %>
 
               <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
               <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
@@ -24,36 +38,36 @@
               <%= f.input :password,
               hint: "leave it blank if you don't want to change it",
               required: false,
-              input_html: { autocomplete: "new-password" } , :input_html => {:style => 'width: 450px'}%>
+              input_html: { autocomplete: "new-password" } , :input_html => {:style => ''}%>
 
               <%= f.input :password_confirmation,
               required: false,
-              input_html: { autocomplete: "new-password" } , :input_html => {:style => 'width: 450px'} %>
+              input_html: { autocomplete: "new-password" } , :input_html => {:style => ''} %>
 
               <%= f.input :current_password,
               hint: "we need your current password to confirm your changes",
               required: true,
-              input_html: { autocomplete: "current-password" } , :input_html => {:style => 'width: 450px'} %>
+              input_html: { autocomplete: "current-password" } , :input_html => {:style => ''} %>
 
               <%= f.input :photo, :label => "Profile picture" %>
               <%= f.input :photo_cache, as: :hidden %>
-
+              <br>
               <div class="form-actions">
                 <%= f.button :submit, "Update", :class => "btn btn-primary btn-block" %>
               </div>
               <% end %>
+
               <div class="cancel-account">
-                <p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, :class => "btn btn-primary btn-block" %></p>
+                Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, :class => "btn btn-primary btn-block" %>
               </div>
+
               <div class="back">
-                <%= link_to "Back", :back , class: "buttonNoFill" %>
+                <%= link_to "Back", :back , class: "buttonNoFill", style: "padding: 5px 50px;" %>
               </div>
 
             </div>
-
-          </div>
-        </div>
       </div>
+
     </div>
   </div>
 </div>
