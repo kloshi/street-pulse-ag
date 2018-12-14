@@ -1,29 +1,72 @@
 .profile_page {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url("bannerpic.jpeg");
-  height: 80vh;
-  width: 700px;
-  background-size: cover;
+  // background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url("bannerpic.jpeg");
+  // height: 80vh;
+  // width: 700px;
+  // background-size: cover;
 }
 
 .profile_page_infos {
-  margin-top: 20px;
-  margin-left: 700px;
-  width: 650px;
-  height: 80vh;
+  position: relative;
+  width: 100%;
+  height: 340px;
   background: white;
+  border-radius: 5px;
   box-shadow: 0 1px 5px rgba(0,0,0,0.2);
   padding: 30px;
+  margin: 30px 0px;
+  img {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 3px;
+    border-color: white;
+  }
+}
+
+.user-profile-bar {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
   position: relative;
+  height: 72px;
+  width: 100%;
+  background-color: #f5f5f5;;
+  border-radius: 3px;
+  color: white;
+  overflow: visible;
+  h1, {
+    position: absolute;
+    margin: auto;
+    width:80%;
+    left: 10px;
+    color: #666666;
+    text-align: left;
+    font-size: 2.1rem;
+    font-weight: 500;
+    text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+  }
+  h1 span {
+    color: #fc6a6a;
+    font-weight: bold;
+  }
+  img {
+    position: absolute;
+    right: 10px;
+    top: auto;
+  }
 }
 
 .profile_page_photo {
-  position: absolute;
-  bottom: 30px;
-  right: 40px;
-  height: 250px;
-  width: 250px;
-  border-radius: 50%;
-  box-shadow: 0 1px 5px rgba(0,0,0,0.2);
-  background-size: cover;
+  // position: absolute;
+  // bottom: 30px;
+  // right: 40px;
+  // height: 250px;
+  // width: 250px;
+  // border-radius: 50%;
+  // box-shadow: 0 1px 5px rgba(0,0,0,0.2);
+  // background-size: cover;
 }
 

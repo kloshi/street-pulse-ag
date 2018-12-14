@@ -16,8 +16,6 @@
   align-items: center;
   justify-content: flex-start;
   position: relative;
-  // height: 600px;
-  // height: 320px;
   margin: 20px 0px;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -143,144 +141,144 @@
 
 // OLD css
 
-.review2-hero-image {
-   /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)), url("reviewPic2.jpeg");
+// .review2-hero-image {
+//    /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+//    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)), url("reviewPic2.jpeg");
 
-    /* Set a specific height */
-    height: 50vh;
+//     /* Set a specific height */
+//     height: 50vh;
 
-    /* Position and center the image to scale nicely on all screens */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.6);
-  }
-  .cardQ5 {
-    width: 50%;
-    padding: 20px;
-    margin: 20px;
-    height: 300px;
-    box-shadow: 0 0px 0px rgba(0,0,0,0.6);
-    background-size: cover !important;
-    position: relative;
-    background-color: #FFF;
-    border: none;
-    &:hover {
-      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    }
-  }
-  .pictureq5 {
-    position: absolute;
-    bottom: 25px;
-    right: 25px;
-  }
+//     /* Position and center the image to scale nicely on all screens */
+//     background-position: center;
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//     position: relative;
+//     box-shadow: 0 1px 3px rgba(0,0,0,0.6);
+//   }
+//   .cardQ5 {
+//     width: 50%;
+//     padding: 20px;
+//     margin: 20px;
+//     height: 300px;
+//     box-shadow: 0 0px 0px rgba(0,0,0,0.6);
+//     background-size: cover !important;
+//     position: relative;
+//     background-color: #FFF;
+//     border: none;
+//     &:hover {
+//       box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+//     }
+//   }
+//   .pictureq5 {
+//     position: absolute;
+//     bottom: 25px;
+//     right: 25px;
+//   }
 
-  .cardQ6 {
-    width: 50%;
-    padding: 20px;
-    margin: 20px;
-    height: 300px;
-    box-shadow: 0 0px 0px rgba(0,0,0,0.6);
-    background-size: cover !important;
-    position: relative;
-    background-color: #FFF;
-    border: none;
-    &:hover {
-      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    }
-  }
-  .pictureq6 {
-    position: absolute;
-    bottom: 25px;
-    right: 25px;
-  }
-  .answers {
-    margin-top: 40px;
+//   .cardQ6 {
+//     width: 50%;
+//     padding: 20px;
+//     margin: 20px;
+//     height: 300px;
+//     box-shadow: 0 0px 0px rgba(0,0,0,0.6);
+//     background-size: cover !important;
+//     position: relative;
+//     background-color: #FFF;
+//     border: none;
+//     &:hover {
+//       box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+//     }
+//   }
+//   .pictureq6 {
+//     position: absolute;
+//     bottom: 25px;
+//     right: 25px;
+//   }
+//   .answers {
+//     margin-top: 40px;
 
-  }
-  .cardEnvironment {
-    width: 50%;
-    padding: 20px;
-    margin: 20px;
-    height: 600px;
-    box-shadow: 0 0px 0px rgba(0,0,0,0.6);
-    background-size: cover !important;
-    position: relative;
-    background-color: #FFF;
-    border: none;
-    &:hover {
-      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    }
-  }
-  .pictureq10 {
-    position: absolute;
-    bottom: 25px;
-    right: 25px;
-  }
+//   }
+//   .cardEnvironment {
+//     width: 50%;
+//     padding: 20px;
+//     margin: 20px;
+//     height: 600px;
+//     box-shadow: 0 0px 0px rgba(0,0,0,0.6);
+//     background-size: cover !important;
+//     position: relative;
+//     background-color: #FFF;
+//     border: none;
+//     &:hover {
+//       box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+//     }
+//   }
+//   .pictureq10 {
+//     position: absolute;
+//     bottom: 25px;
+//     right: 25px;
+//   }
 
-  .cardCommunity {
-    width: 50%;
-    padding: 20px;
-    margin: 20px;
-    height: 600px;
-    box-shadow: 0 0px 0px rgba(0,0,0,0.6);
-    background-size: cover !important;
-    position: relative;
-    background-color: #FFF;
-    border: none;
-    &:hover {
-      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    }
-  }
-  .pictureq7 {
-    position: absolute;
-    bottom: 25px;
-    right: 25px;
-  }
-  .cardFacilities {
-    width: 50%;
-    padding: 20px;
-    margin: 20px;
-    height: 800px;
-    box-shadow: 0 0px 0px rgba(0,0,0,0.6);
-    background-size: cover !important;
-    position: relative;
-    background-color: #FFF;
-    border: none;
-    &:hover {
-      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    }
-  }
-  .pictureq13 {
-    position: absolute;
-    bottom: 25px;
-    right: 25px;
-  }
-  .cardComfort {
-    width: 50%;
-    padding: 20px;
-    margin: 20px;
-    height: 800px;
-    box-shadow: 0 0px 0px rgba(0,0,0,0.6);
-    background-size: cover !important;
-    position: relative;
-    background-color: #FFF;
-    border: none;
-    &:hover {
-      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    }
-  }
-  .pictureq18 {
-    position: absolute;
-    bottom: 25px;
-    right: 25px;
-  }
-  .buttonSubmitQ {
-    padding: 40px;
-    margin-left: 730px;
-  }
+//   .cardCommunity {
+//     width: 50%;
+//     padding: 20px;
+//     margin: 20px;
+//     height: 600px;
+//     box-shadow: 0 0px 0px rgba(0,0,0,0.6);
+//     background-size: cover !important;
+//     position: relative;
+//     background-color: #FFF;
+//     border: none;
+//     &:hover {
+//       box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+//     }
+//   }
+//   .pictureq7 {
+//     position: absolute;
+//     bottom: 25px;
+//     right: 25px;
+//   }
+//   .cardFacilities {
+//     width: 50%;
+//     padding: 20px;
+//     margin: 20px;
+//     height: 800px;
+//     box-shadow: 0 0px 0px rgba(0,0,0,0.6);
+//     background-size: cover !important;
+//     position: relative;
+//     background-color: #FFF;
+//     border: none;
+//     &:hover {
+//       box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+//     }
+//   }
+//   .pictureq13 {
+//     position: absolute;
+//     bottom: 25px;
+//     right: 25px;
+//   }
+//   .cardComfort {
+//     width: 50%;
+//     padding: 20px;
+//     margin: 20px;
+//     height: 800px;
+//     box-shadow: 0 0px 0px rgba(0,0,0,0.6);
+//     background-size: cover !important;
+//     position: relative;
+//     background-color: #FFF;
+//     border: none;
+//     &:hover {
+//       box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+//     }
+//   }
+//   .pictureq18 {
+//     position: absolute;
+//     bottom: 25px;
+//     right: 25px;
+//   }
+//   .buttonSubmitQ {
+//     padding: 40px;
+//     margin-left: 730px;
+//   }
 
   datalist {
     display: flex;
