@@ -34,7 +34,7 @@
 
         <!-- current rating for this street -->
         <div class="card-neighbourhood-bar for-static-map" style="max-width: 640px;">
-          <h1 style="width: 75%;">This neighborhood <span>current rating:</span></h1>
+          <h1 style="width: 75%;">This neighborhood <br><span>current rating:</span></h1>
           <h6> <span><%= @street_average %></span> </h6>
         </div>
 
@@ -59,7 +59,7 @@
           <h1><span>Rate the street:</span></h1>
         </div>
 
-        <h4><strong><%= @search.address %></strong></h4>
+        <h1 style="padding: 0px 15px;"><strong><%= @search.address %></strong></h1>
 
         <div class="review-form">
           <label style="margin-bottom: 25px;">Your general appreciation of the street</label>
