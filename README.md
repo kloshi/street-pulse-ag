@@ -15,4 +15,9 @@ Just enter address (or just a street name), set the radius (e.g. 1200m) and hit 
 Rails app generated with some help of [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) students team.
 
 
+### Browser screenshot
 ![screen_shot](2018-12-11_11-46-31.jpg)
+
+
+### Mobile screenshot
+![screen_shot](street-pulse-screenshot-mobile.png)
